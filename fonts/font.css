@@ -1,0 +1,11 @@
+@font-face {
+  font-family: 'Wies';
+  src: url('16010.eot');
+  src: url('16010.eot?#iefix') format('embedded-opentype'),
+       url('16010.woff2') format('woff2');
+  src: url('WiesbadenSwingLTCYR-Roman.svg#WiesbadenSwingLTCYR-Roman') format('svg'),
+       url('WiesbadenSwingLTCYR-Roman.ttf') format('truetype'),
+       url('WiesbadenSwingLTCYR-Roman.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
