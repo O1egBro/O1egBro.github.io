@@ -263,7 +263,7 @@ pixel perfect</h1>
                                                 
                                                 this.lineTop=$event.target.querySelector('span').getBoundingClientRect().top - this.$refs.portfolio.getBoundingClientRect().top + $event.target.querySelector('span').offsetHeight/2;
                                                 this.lineLeft=$event.target.querySelector('span').getBoundingClientRect().width ;
-                                                console.log(this.lineLeft)
+                                                console.log(this.margin )
                                             }else {
                                                 
                                                 this.margin=$event.target.getBoundingClientRect().top - this.$refs.portfolio.getBoundingClientRect().top;
@@ -271,7 +271,7 @@ pixel perfect</h1>
                                                 this.lineTop=$event.target.getBoundingClientRect().top - this.$refs.portfolio.getBoundingClientRect().top + $event.target.offsetHeight/2;
                                                 this.lineLeft=$event.target.getBoundingClientRect().width + 15 ;
                                                 
-                                                console.log(this.lineLeft )
+                                                console.log(this.margin )
                                             }
 
                                             
@@ -279,8 +279,8 @@ pixel perfect</h1>
                                             
                                         }else {
                                             
-                                            this.margin=this.$refs.portfolio.getBoundingClientRect().bottom+65;
-                                            
+                                            this.margin=this.$refs.portfolio.getBoundingClientRect().bottom - this.$refs.portfolio.getBoundingClientRect().top - 280;
+                                            console.log(this.margin )
                                             if(event.target.tagName.toLowerCase() === 'a') {
                                                 
                                                 
