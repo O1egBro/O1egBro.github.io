@@ -244,6 +244,15 @@ section {
         .portfolio-img_block img + div {
           display: none; }
 
+.info {
+  width: 100%;
+  display: flex;
+  padding: 0 10px;
+  justify-content: space-between; }
+  @media (max-width: 600px) {
+    .info > * {
+      width: 50%; } }
+
 .logo {
   font-family: "Wies";
   position: relative;
