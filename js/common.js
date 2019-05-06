@@ -4,7 +4,9 @@ var Common = {
 	},
 
     menu: function() {
-        
+        $('.nav_a').on('click',function(e){
+            e.preventDefault();
+        })
     },
 
 };
