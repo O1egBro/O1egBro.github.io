@@ -8,7 +8,7 @@ var Common = {
             e.preventDefault();
             $([document.documentElement, document.body]).animate({
                 scrollTop: $("."+$(this).data('a')).offset().top
-            }, 2000);
+            }, 500);
         })
     },
 
