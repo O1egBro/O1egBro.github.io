@@ -249,6 +249,20 @@ section {
   display: flex;
   padding: 0 10px;
   justify-content: space-between; }
+  .info a {
+    background: #ef3124;
+    background: -moz-linear-gradient(left, #ef3124 0%, #f4851e 100%);
+    background: -webkit-gradient(left top, right top, color-stop(0%, #ef3124), color-stop(100%, #f4851e));
+    background: -webkit-linear-gradient(left, #ef3124 0%, #f4851e 100%);
+    background: -o-linear-gradient(left, #ef3124 0%, #f4851e 100%);
+    background: -ms-linear-gradient(left, #ef3124 0%, #f4851e 100%);
+    background: linear-gradient(to right, #ef3124 0%, #f4851e 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ef3124', endColorstr='#f4851e', GradientType=1 );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; }
+    .info a:hover {
+      -webkit-text-fill-color: unset;
+      text-decoration: underline; }
   @media (min-width: 600px) {
     .info > * {
       width: 50%; } }
