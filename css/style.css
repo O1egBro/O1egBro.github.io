@@ -177,6 +177,7 @@ section {
     display: flex;
     flex-direction: column;
     font-weight: 600;
+    align-items: flex-start;
     text-transform: uppercase;
     position: relative; }
     @media (max-width: 960px) {

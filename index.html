@@ -257,64 +257,22 @@ pixel perfect</h1>
                                       
                                     setActive(item,$event) {
                                         
-//                                        if(event.target.tagName.toLowerCase() === 'a') {
-//                                            this.src = 
-//                                        }
-                                            
-                                        if(this.$refs.portfolio.getBoundingClientRect().bottom - $event.target.getBoundingClientRect().top > 270) {
-                                            
-                                            
-                                            if(event.target.tagName.toLowerCase() === 'a') {
-                                                
-                                                this.margin=$event.target.querySelector('span').getBoundingClientRect().top - this.$refs.portfolio.getBoundingClientRect().top;
-                                                
-                                                this.lineTop=$event.target.querySelector('span').getBoundingClientRect().top - this.$refs.portfolio.getBoundingClientRect().top + $event.target.querySelector('span').offsetHeight/2;
-                                                this.lineLeft=$event.target.querySelector('span').getBoundingClientRect().width ;
-                                                console.log(this.margin )
-                                            }else {
-                                                
-                                                this.margin=$event.target.getBoundingClientRect().top - this.$refs.portfolio.getBoundingClientRect().top;
-                                                
-                                                this.lineTop=$event.target.getBoundingClientRect().top - this.$refs.portfolio.getBoundingClientRect().top + $event.target.offsetHeight/2;
-                                                this.lineLeft=$event.target.getBoundingClientRect().width + 15 ;
-                                                
-                                                console.log(this.margin )
-                                            }
 
-                                            
-                                            
-                                            
-                                        }else {
-                                            
-                                            this.margin=this.$refs.portfolio.getBoundingClientRect().bottom - this.$refs.portfolio.getBoundingClientRect().top - 280;
-                                            console.log(this.margin )
-                                            if(event.target.tagName.toLowerCase() === 'a') {
+                                        this.margin= (this.$refs.portfolio.getBoundingClientRect().bottom - $event.target.getBoundingClientRect().top > 270) ? $event.target.getBoundingClientRect().top - this.$refs.portfolio.getBoundingClientRect().top : this.$refs.portfolio.getBoundingClientRect().bottom - this.$refs.portfolio.getBoundingClientRect().top - 280;
                                                 
+                                        this.lineTop=$event.target.getBoundingClientRect().top - this.$refs.portfolio.getBoundingClientRect().top + $event.target.offsetHeight/2;
                                                 
-                                                
-                                                this.lineTop=$event.target.querySelector('span').getBoundingClientRect().top - this.$refs.portfolio.getBoundingClientRect().top + $event.target.querySelector('span').offsetHeight/2;
-                                                this.lineLeft=$event.target.querySelector('span').getBoundingClientRect().width ;
-                                                console.log(this.lineLeft)
-                                            }else {
-                                                
-                                   
-                                                
-                                                this.lineTop=$event.target.getBoundingClientRect().top - this.$refs.portfolio.getBoundingClientRect().top + $event.target.offsetHeight/2;
-                                                this.lineLeft=$event.target.getBoundingClientRect().width + 15 ;
-                                                
-                                                console.log(this.lineLeft )
-                                            }
-                                        }
+                                        this.lineLeft=$event.target.getBoundingClientRect().width + 15 ;    
+                                        
                                         
                                         this.items.forEach(el => {
                                             el.active = el === item;
                                         })
                                         
                                         let blockHeight = this.$refs.portfolioimgblock.offsetHeight;
-//                                        console.log(blockHeight)
-                                        //console.log($('.portfolio-img_block img.active').height())
+
                                         setTimeout(function(){$event.target.innerHTML},100)
-//                                        console.log($event.target.innerHTML)
+
                                     },
                                     handleResize() {
                                       this.width = window.innerWidth;
