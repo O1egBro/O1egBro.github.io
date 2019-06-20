@@ -13,6 +13,9 @@
 	<link rel="stylesheet" href="fonts/icomoon/style.css">
 	
     <script src="js/libs/jquery-3.4.1.min.js"></script>
+    <script src="js/libs/jquery.mousewheel.min.js"></script>
+    <script src="js/libs/jquery.jscrollpane.min.js"></script>
+    <script src="js/libs/jquery.formstyler.min.js"></script>
     <script src="js/common.js"></script>
     
     
@@ -26,37 +29,39 @@
             <div class="wrapper">
                 <div class="flex header-top">
                     <div class="flex">
-                        <a href="" class="logo">
-                            <img src="../images/logo.png" alt="logo">
+                        <a href="" class="nav__menu">
+                            <i class="icon-menu"></i>
                         </a>
-                        <nav>
-                            <a href="" class="active">Каталог</a>
-                            <a href="">Где купить</a>
-                            <a href="">О компании</a>
-                            <a href="">Партнерам</a>
+                        <a href="/" class="logo">
+                            <img class="logo-img" src="images/logo.png" alt="logo">
+                        </a>
+                        <nav class="nav">
+                            <a href="" class="nav-a active">Каталог</a>
+                            <a href="" class="nav-a">Где купить</a>
+                            <a href="" class="nav-a">О компании</a>
+                            <a href="" class="nav-a">Партнерам</a>
                         </nav>
                     </div>
                     <div class="tel">
-                        <a href="">
+                        <a class="tel-a" href="">
                             8 (800) 555-25-40
-                            
                         </a>
-                        <span>звонок бесплатный</span>
+                        <span class="tel-span">звонок бесплатный</span>
                     </div>
                 </div>
                 <div class="flex header-bottom">
-                    <form class="search">
-                        <input type="text" placeholder="Что ищем...">
+                    <form class="search search-header flex">
+                        <input type="text" placeholder="Что ищем..." class="search-input">
                         <button class="btn btn-red">Найти</button>
                     </form>
-                    <div>
+                    <div class="header-button">
                         <a href="" class="btn btn-white">Оптовый прайс</a>
                         <a href="" class="btn btn-white">Стать партнером</a>
                     </div>
                 </div>
             </div>
         </header>
-        <div class="wrapper">
+        <div class="wrapper ">
             <div class="bread">
                 <a href="" class="bread-a">
                     Главная
@@ -69,6 +74,12 @@
         <section class="catalog">
             <div class="wrapper flex catalog-top">
                 <h1 class="block-head">Товары</h1>
+                <div class="catalog-left-block">
+                    <div class="catalog-left-button ">
+                        Фильтры
+                        <i class="icon-arrUp"></i>
+                    </div>
+                </div>
                 
                 <select>
                     <option>Сортировать по</option>
@@ -86,95 +97,136 @@
                             <div class="catalog__filter-head">
                                 Категория <i class="icon-arrUp"></i>
                             </div>
-                            <div class="catalog__filter-body">
-                                <label class="checkbox">
-                                    <input type="checkbox"><i></i>
-                                    <div>Бархотка</div>
-                                    <span></span>
-                                </label>
-                                <label class="checkbox">
-                                    <input type="checkbox"><i></i>
-                                    <div>Башмаки натяжителя</div>
-                                    <span></span>
-                                </label>
-                                <label class="checkbox">
-                                    <input type="checkbox"><i></i>
-                                    <div>Брызговики</div>
-                                    <span></span>
-                                </label>
-                                <label class="checkbox">
-                                    <input type="checkbox"><i></i>
-                                    <div>Втулки подвески</div>
-                                    <span></span>
-                                </label>
-                                <label class="checkbox">
-                                    <input type="checkbox"><i></i>
-                                    <div>Домкрат</div>
-                                    <span></span>
-                                </label>
-                                <label class="checkbox">
-                                    <input type="checkbox"><i></i>
-                                    <div>Иномарки</div>
-                                    <span></span>
-                                </label>
-                                <label class="checkbox">
-                                    <input type="checkbox"><i></i>
-                                    <div>Автомобильные ковры</div>
-                                    <span></span>
-                                </label>
-                                <label class="checkbox">
-                                    <input type="checkbox"><i></i>
-                                    <div>Крепления глушителя</div>
-                                    <span></span>
-                                </label>
+                            <div class="catalog__filter-toggle">
+                                <div class="catalog__filter-body scroll-pane">
+                                    <label class="checkbox">
+                                        <input type="checkbox" class="checkbox-input"><i class="checkbox-i"></i>
+                                        <div>Бархотка</div>
+                                        <span class="checkbox-span"></span>
+                                    </label>
+                                    <label class="checkbox">
+                                        <input type="checkbox" class="checkbox-input"><i class="checkbox-i"></i>
+                                        <div>Башмаки натяжителя</div>
+                                        <span class="checkbox-span"></span>
+                                    </label>
+                                    <label class="checkbox">
+                                        <input type="checkbox" class="checkbox-input"><i class="checkbox-i"></i>
+                                        <div>Брызговики</div>
+                                        <span class="checkbox-span"></span>
+                                    </label>
+                                    <label class="checkbox">
+                                        <input type="checkbox" class="checkbox-input"><i class="checkbox-i"></i>
+                                        <div>Втулки подвески</div>
+                                        <span class="checkbox-span"></span>
+                                    </label>
+                                    <label class="checkbox">
+                                        <input type="checkbox" class="checkbox-input"><i class="checkbox-i"></i>
+                                        <div>Домкрат</div>
+                                        <span class="checkbox-span"></span>
+                                    </label>
+                                    <label class="checkbox">
+                                        <input type="checkbox" class="checkbox-input"><i class="checkbox-i"></i>
+                                        <div>Иномарки</div>
+                                        <span class="checkbox-span"></span>
+                                    </label>
+                                    <label class="checkbox">
+                                        <input type="checkbox" class="checkbox-input"><i class="checkbox-i"></i>
+                                        <div>Автомобильные ковры</div>
+                                        <span class="checkbox-span"></span>
+                                    </label>
+                                    <label class="checkbox">
+                                        <input type="checkbox" class="checkbox-input"><i class="checkbox-i"></i>
+                                        <div>Крепления глушителя</div>
+                                        <span class="checkbox-span"></span>
+                                    </label>
+                                    <label class="checkbox">
+                                        <input type="checkbox" class="checkbox-input"><i class="checkbox-i"></i>
+                                        <div>Бархотка</div>
+                                        <span class="checkbox-span"></span>
+                                    </label>
+                                    <label class="checkbox">
+                                        <input type="checkbox" class="checkbox-input"><i class="checkbox-i"></i>
+                                        <div>Башмаки натяжителя</div>
+                                        <span class="checkbox-span"></span>
+                                    </label>
+                                    <label class="checkbox">
+                                        <input type="checkbox" class="checkbox-input"><i class="checkbox-i"></i>
+                                        <div>Брызговики</div>
+                                        <span class="checkbox-span"></span>
+                                    </label>
+                                    <label class="checkbox">
+                                        <input type="checkbox" class="checkbox-input"><i class="checkbox-i"></i>
+                                        <div>Втулки подвески</div>
+                                        <span class="checkbox-span"></span>
+                                    </label>
+                                    <label class="checkbox">
+                                        <input type="checkbox" class="checkbox-input"><i class="checkbox-i"></i>
+                                        <div>Домкрат</div>
+                                        <span class="checkbox-span"></span>
+                                    </label>
+                                    <label class="checkbox">
+                                        <input type="checkbox" class="checkbox-input"><i class="checkbox-i"></i>
+                                        <div>Иномарки</div>
+                                        <span class="checkbox-span"></span>
+                                    </label>
+                                    <label class="checkbox">
+                                        <input type="checkbox" class="checkbox-input"><i class="checkbox-i"></i>
+                                        <div>Автомобильные ковры</div>
+                                        <span class="checkbox-span"></span>
+                                    </label>
+                                    <label class="checkbox">
+                                        <input type="checkbox" class="checkbox-input"><i class="checkbox-i"></i>
+                                        <div>Крепления глушителя</div>
+                                        <span class="checkbox-span"></span>
+                                    </label>
+                                
+                                </div>
                             </div>
                         </div>
                         
                         <div class="catalog__filter-block block-main">
                             <div class="catalog__filter-head">
-                                Автомобиль <i class="icon-"></i>
+                                Автомобиль <i class="icon-arrUp"></i>
                             </div>
-                            <div class="catalog__filter-body">
-                                <label class="checkbox">
-                                    <input type="checkbox"><i></i>
-                                    <div>Chevrolet Niva 2123</div>
-                                    <span>(2)</span>
-                                </label>
-                                <label class="checkbox">
-                                    <input type="checkbox"><i></i>
-                                    <div>LADA VESTA </div>
-                                    <span>(1)</span>
-                                </label>
-                                <label class="checkbox">
-                                    <input type="checkbox"><i></i>
-                                    <div>ВАЗ 2107-07 </div>
-                                    <span>(7)</span>
-                                </label>
-                                <label class="checkbox">
-                                    <input type="checkbox"><i></i>
-                                    <div>ВАЗ 1117/1118/1119</div>
-                                    <span>(8)</span>
-                                </label>
-                                <label class="checkbox">
-                                    <input type="checkbox"><i></i>
-                                    <div>Домкрат</div>
-                                    <span></span>
-                                </label>
-                                <label class="checkbox">
-                                    <input type="checkbox"><i></i>
-                                    <div>Иномарки</div>
-                                    <span></span>
-                                </label>
-                                <label class="checkbox">
-                                    <input type="checkbox"><i></i>
-                                    <div>Автомобильные ковры</div>
-                                    <span></span>
-                                </label>
-                                <label class="checkbox">
-                                    <input type="checkbox"><i></i>
-                                    <div>Крепления глушителя</div>
-                                    <span></span>
-                                </label>
+                            <div class="catalog__filter-toggle">
+                                <div class="catalog__filter-body scroll-pane">
+                                    <label class="checkbox">
+                                        <input type="checkbox" class="checkbox-input"><i class="checkbox-i"></i>
+                                        <div>Chevrolet Niva 2123</div>
+                                        <span class="checkbox-span">(2)</span>
+                                    </label>
+                                    <label class="checkbox">
+                                        <input type="checkbox" class="checkbox-input"><i class="checkbox-i"></i>
+                                        <div>LADA VESTA </div>
+                                        <span class="checkbox-span">(1)</span>
+                                    </label>
+                                    <label class="checkbox">
+                                        <input type="checkbox" class="checkbox-input"><i class="checkbox-i"></i>
+                                        <div>ВАЗ 2107-07 </div>
+                                        <span class="checkbox-span">(7)</span>
+                                    </label>
+                                    <label class="checkbox">
+                                        <input type="checkbox" class="checkbox-input"><i class="checkbox-i"></i>
+                                        <div>ВАЗ 1117/1118/1119</div>
+                                        <span class="checkbox-span">(8)</span>
+                                    </label>
+                                    <label class="checkbox">
+                                        <input type="checkbox" class="checkbox-input"><i class="checkbox-i"></i>
+                                        <div>Домкрат</div>
+                                        <span class="checkbox-span"></span>
+                                    </label>
+                                    <label class="checkbox">
+                                        <input type="checkbox" class="checkbox-input"><i class="checkbox-i"></i>
+                                        <div>Иномарки</div>
+                                        <span class="checkbox-span"></span>
+                                    </label>
+                                    <label class="checkbox">
+                                        <input type="checkbox" class="checkbox-input"><i class="checkbox-i"></i>
+                                        <div>Автомобильные ковры</div>
+                                        <span class="checkbox-span"></span>
+                                    </label>
+                                    
+                                </div>
                             </div>
                         </div>
                         <div class="catalog__filter-block block-main">
@@ -190,7 +242,7 @@
                     <div class="catalog__list flex">
                         <div class="catalog__item block-main">
                             <a href="" class="catalog__item-img">
-                                <img src="images/temp/1.jpg" alt="alt">
+                                <img class="catalog__item-image" src="images/temp/1.jpg" alt="alt">
                             </a>
                             <a href="" class="catalog__item-name">
                                 Опора карданного вала 2101/2102/2103/2104/2105/и еще много 21 чет там
@@ -201,7 +253,7 @@
                         </div>
                         <div class="catalog__item block-main">
                             <a href="" class="catalog__item-img">
-                                <img src="images/temp/2.jpg" alt="alt">
+                                <img class="catalog__item-image" src="images/temp/2.jpg" alt="alt">
                             </a>
                             <a href="" class="catalog__item-name">
                                 Патрубки системы охлаждения 2112
@@ -212,7 +264,7 @@
                         </div>
                         <div class="catalog__item block-main">
                             <a href="" class="catalog__item-img">
-                                <img src="images/temp/3.jpg" alt="alt">
+                                <img class="catalog__item-image" src="images/temp/3.jpg" alt="alt">
                             </a>
                             <a href="" class="catalog__item-name">
                                 Опора двигателя 2110 задняя в сборе
@@ -223,7 +275,7 @@
                         </div>
                         <div class="catalog__item block-main">
                             <a href="" class="catalog__item-img">
-                                <img src="images/temp/4.jpg" alt="alt">
+                                <img class="catalog__item-image" src="images/temp/4.jpg" alt="alt">
                             </a>
                             <a href="" class="catalog__item-name">
                                 Опора карданного вала 2101/2102/2103/2104/2105/и еще много 21 чет там
@@ -234,7 +286,7 @@
                         </div>
                         <div class="catalog__item block-main">
                             <a href="" class="catalog__item-img">
-                                <img src="images/temp/1.jpg" alt="alt">
+                                <img class="catalog__item-image" src="images/temp/1.jpg" alt="alt">
                             </a>
                             <a href="" class="catalog__item-name">
                                 Опора карданного вала 2101/2102/2103/2104/2105/и еще много 21 чет там
@@ -245,7 +297,7 @@
                         </div>
                         <div class="catalog__item block-main">
                             <a href="" class="catalog__item-img">
-                                <img src="images/temp/2.jpg" alt="alt">
+                                <img class="catalog__item-image" src="images/temp/2.jpg" alt="alt">
                             </a>
                             <a href="" class="catalog__item-name">
                                 Патрубки системы охлаждения 2112
@@ -256,7 +308,7 @@
                         </div>
                         <div class="catalog__item block-main">
                             <a href="" class="catalog__item-img">
-                                <img src="images/temp/3.jpg" alt="alt">
+                                <img class="catalog__item-image" src="images/temp/3.jpg" alt="alt">
                             </a>
                             <a href="" class="catalog__item-name">
                                 Опора двигателя 2110 задняя в сборе
@@ -267,7 +319,7 @@
                         </div>
                         <div class="catalog__item block-main">
                             <a href="" class="catalog__item-img">
-                                <img src="images/temp/4.jpg" alt="alt">
+                                <img class="catalog__item-image" src="images/temp/4.jpg" alt="alt">
                             </a>
                             <a href="" class="catalog__item-name">
                                 Опора карданного вала 2101/2102/2103/2104/2105/и еще много 21 чет там
@@ -278,7 +330,7 @@
                         </div>
                         <div class="catalog__item block-main">
                             <a href="" class="catalog__item-img">
-                                <img src="images/temp/1.jpg" alt="alt">
+                                <img class="catalog__item-image" src="images/temp/1.jpg" alt="alt">
                             </a>
                             <a href="" class="catalog__item-name">
                                 Опора карданного вала 2101/2102/2103/2104/2105/и еще много 21 чет там
@@ -289,7 +341,7 @@
                         </div>
                         <div class="catalog__item block-main">
                             <a href="" class="catalog__item-img">
-                                <img src="images/temp/2.jpg" alt="alt">
+                                <img class="catalog__item-image" src="images/temp/2.jpg" alt="alt">
                             </a>
                             <a href="" class="catalog__item-name">
                                 Патрубки системы охлаждения 2112
@@ -300,7 +352,7 @@
                         </div>
                         <div class="catalog__item block-main">
                             <a href="" class="catalog__item-img">
-                                <img src="images/temp/3.jpg" alt="alt">
+                                <img class="catalog__item-image" src="images/temp/3.jpg" alt="alt">
                             </a>
                             <a href="" class="catalog__item-name">
                                 Опора двигателя 2110 задняя в сборе
@@ -311,7 +363,7 @@
                         </div>
                         <div class="catalog__item block-main">
                             <a href="" class="catalog__item-img">
-                                <img src="images/temp/4.jpg" alt="alt">
+                                <img class="catalog__item-image" src="images/temp/4.jpg" alt="alt">
                             </a>
                             <a href="" class="catalog__item-name">
                                 Опора карданного вала 2101/2102/2103/2104/2105/и еще много 21 чет там
@@ -336,30 +388,30 @@
         </section>
         
     </div>   
-    <footer>
+    <footer class="footer-block">
         <div class="wrapper">
             <a href="" class="logo">
-                <img src="../images/logoW.png" alt="alt">
+                <img class="footer-image" src="../images/logoW.png" alt="alt">
             </a>
             <div class="flex">
                 <div class="footer__top">
-                    <a href="">ЗАКАЗАТЬ ЗВОНОК</a>
-                    <a href="">8 (800) 555-25-40</a>
+                    <a class="footer__top-a" href="">ЗАКАЗАТЬ ЗВОНОК</a>
+                    <a class="footer__top-a" href="">8 (800) 555-25-40</a>
                 </div>
             </div>
             <div class="footer__nav">
-                <a href="">Главная</a>
-                <a href="">Каталог</a>
-                <a href="">Где купить</a>
-                <a href="">Партнерам</a>
-                <a href="">Гарантия и возврат</a>
-                <a href="">О компании</a>
-                <a href="">Новости</a>
-                <a href="">Контакты</a>
+                <a class="footer-a footer__nav-a" href="">Главная</a>
+                <a class="footer-a footer__nav-a" href="">Каталог</a>
+                <a class="footer-a footer__nav-a" href="">Где купить</a>
+                <a class="footer-a footer__nav-a" href="">Партнерам</a>
+                <a class="footer-a footer__nav-a" href="">Гарантия и возврат</a>
+                <a class="footer-a footer__nav-a" href="">О компании</a>
+                <a class="footer-a footer__nav-a" href="">Новости</a>
+                <a class="footer-a footer__nav-a" href="">Контакты</a>
                 <a href="" class="tel">8 (800) 555-25-40</a>
             </div>
             <div class="copy">
-                <span>© 2019</span> БАЛАКОВО ЗАПЧАСТЬ
+                <span class="copy-span">© 2019</span> БАЛАКОВО ЗАПЧАСТЬ
             </div>
         </div>
     </footer>
