@@ -1,0 +1,36 @@
+@font-face {
+    font-family: 'BasisGrotesqueProMedium';
+    src: url('BasisGrotesqueProMedium.eot');
+    src: url('BasisGrotesqueProMedium.eot') format('embedded-opentype'),
+         url('BasisGrotesqueProMedium.woff2') format('woff2'),
+         url('BasisGrotesqueProMedium.woff') format('woff'),
+         url('BasisGrotesqueProMedium.ttf') format('truetype'),
+         url('BasisGrotesqueProMedium.svg#BasisGrotesqueProMedium') format('svg');
+}
+@font-face {
+    font-family: 'BasisGrotesqueProBlack';
+    src: url('BasisGrotesqueProBlack.eot');
+    src: url('BasisGrotesqueProBlack.eot') format('embedded-opentype'),
+         url('BasisGrotesqueProBlack.woff2') format('woff2'),
+         url('BasisGrotesqueProBlack.woff') format('woff'),
+         url('BasisGrotesqueProBlack.ttf') format('truetype'),
+         url('BasisGrotesqueProBlack.svg#BasisGrotesqueProBlack') format('svg');
+}
+@font-face {
+    font-family: 'BasisGrotesqueProRegular';
+    src: url('BasisGrotesqueProRegular.eot');
+    src: url('BasisGrotesqueProRegular.eot') format('embedded-opentype'),
+         url('BasisGrotesqueProRegular.woff2') format('woff2'),
+         url('BasisGrotesqueProRegular.woff') format('woff'),
+         url('BasisGrotesqueProRegular.ttf') format('truetype'),
+         url('BasisGrotesqueProRegular.svg#BasisGrotesqueProRegular') format('svg');
+}
+@font-face {
+    font-family: 'BasisGrotesqueProBold';
+    src: url('BasisGrotesqueProBold.eot');
+    src: url('BasisGrotesqueProBold.eot') format('embedded-opentype'),
+         url('BasisGrotesqueProBold.woff2') format('woff2'),
+         url('BasisGrotesqueProBold.woff') format('woff'),
+         url('BasisGrotesqueProBold.ttf') format('truetype'),
+         url('BasisGrotesqueProBold.svg#BasisGrotesqueProBold') format('svg');
+}
