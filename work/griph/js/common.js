@@ -42,8 +42,15 @@ var Common = {
         if ($(document).scrollTop() >= $('.header').height()/2) {
             $('.arrow').addClass('black')
         }
-        $(document).scroll(function(e){
-            if ($(document).scrollTop() >= $('.header').height()/2) {
+        
+        
+        
+        $('.body').scroll(function(e){
+
+            var scrollTop = document.documentElement.scrollTop || document.body && document.body.scrollTop || 0;
+            scrollTop -= document.documentElement.clientTop;
+    
+            if (scrollTop >= $('.header').height()/2) {
                 $('.arrow').addClass('black')
             }else {
                 $('.arrow').removeClass('black')
