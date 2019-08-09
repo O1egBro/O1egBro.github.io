@@ -45,7 +45,7 @@ var Common = {
         
         
         
-        $('.body').scroll(function(e){
+        $('body').scroll(function(e){
 
             var scrollTop = document.documentElement.scrollTop || document.body && document.body.scrollTop || 0;
             scrollTop -= document.documentElement.clientTop;
