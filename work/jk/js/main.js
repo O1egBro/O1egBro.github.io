@@ -2728,7 +2728,7 @@ $('.close-modal').on('click',function(e){
     $.fancybox.close();
 });
 $('body').on('submit','.modal_form.fancybox-content form',function(e){
-    let f = $(this);
+    var f = $(this);
     e.preventDefault();
     
     f.find('input.r').addClass('empty_field');
@@ -2775,19 +2775,17 @@ $('body').on('submit','.modal_form.fancybox-content form',function(e){
             lightEmpty();
             return false
           } else {
-              alert($('.modal_form.fancybox-content form').serialize())
+//              console.log($('.modal_form.fancybox-content form').serialize())
             $.ajax({
                 type: "POST",
                 url: "send.php",
-                data: $('.modal_form.fancybox-content form').serialize(),
+                data: f.serialize(),
                 success: function(data) {
-                    $('.mess').html(data);
+//                    console.log(data)
+                    $.fancybox.close();
                 }
             });
           }
-   
-    
-
 });
 
 

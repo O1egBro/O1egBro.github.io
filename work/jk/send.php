@@ -1,41 +1,69 @@
-<?php 
+<?php
 
-
-	$to = 'Darthjktu@email'; // адрес получателя
-	$subject = 'Тема письма'; // тема письма
+	header("Content-Type: text/html; charset=utf-8");
 	
-	$email = $post['field']['e-mail']; // поле email
-	$name = trim($post['field']['name']); // поле имя
-	$login = trim($post['field']['login']); // поле имя
-	$date = trim($post['field']['date']); // поле имя
-	$promo = trim($post['field']['promo']); // поле имя
-	$message = trim($post['field']['comment']); // поле сообщения
+	if(isset($_SERVER["HTTP_X_REQUESTED_WITH"]) && strtolower($_SERVER["HTTP_X_REQUESTED_WITH"]) === "xmlhttprequest") {
+	
 		
-//	if (!$name)
-//	{
-//
-//		echo 'Не указано имя!';
-//		exit;
-//	}
 	
-//	if (!$message)
-//	{
-//		echo 'Не указан текст сообщения!';
-//		exit;
-//	}	
+		function send_form($message) {
 	
-	// формируем headers для письма
-	$headers = 'From: '. $email . "\r\n"; // от кого
+			$mail_to = "Darthjktu@gmail.com"; /*Ваш e-mail*/
+			$subject = "Заказ"; 
+			$headers = "MIME-Version: 1.0\r\n";
+			$headers .= "Content-type: text/html; charset=utf-8\r\n";
+			$headers .= "From:<no-reply@".$_SERVER['HTTP_HOST'].">\r\n";
 
-	// формируем тело сообщения
-	$message = 'Имя: ' . $name . NR . 'Email: ' . $email . NR . 'promo: ' . $promo . NR . $login . NR . $date . NR . NR . $message ; 
-	 
-	// кодируем заголовок в UTF-8
-	$subject = preg_replace("/(\r\n)|(\r)|(\n)/", "", $subject);
-	$subject = preg_replace("/(\t)/", " ", $subject);
-	$subject = '=?UTF-8?B?' . base64_encode($subject) . '?=';
+			mail($mail_to, $subject, $message, $headers);
+		
+		}
 
-	// отправка
-	@mail($to, $subject, $message, $headers);
+		$name = isset($_POST["name"]) ? strip_tags($_POST["name"]) : '' ; 
+		$login = isset($_POST["login"]) ? strip_tags($_POST["login"]) : '' ; 
+		$email = isset($_POST["e-mail"]) ? strip_tags($_POST["e-mail"]) : '' ; 
+		$date = isset($_POST["date"]) ? strip_tags($_POST["date"]) : '' ; 
+		$promo = isset($_POST["promo"]) ? strip_tags($_POST["promo"]) : '' ; 
+		$forma = isset($_POST["forma"]) ? strip_tags($_POST["forma"]) : '' ; 
+		$comment = isset($_POST["comment"]) ? strip_tags($_POST["comment"]) : ''; 
 
-	echo 'Спасибо, ваше сообщение отправлено!';
+
+
+		if($email == "") { 
+
+			echo "Не указан телефон.";
+
+			die();
+
+		} 
+
+		if($name == "") { 
+
+			$name = "Не указано Имя";
+            die();
+
+		}
+
+		$message = <<<HTML
+
+			<b>форма</b>: {$forma}<br>
+			<b>Имя</b>: {$name}<br>
+			<b>логин</b>: {$login}<br><br>
+			<b>email</b>: {$email}<br><br>
+			<b>дата</b>: {$date}<br><br>
+			<b>промокод</b>: {$promo}<br><br>
+			<b>комент</b>: {$comment}<br><br>
+
+HTML;
+
+		send_form($message); 
+		
+		echo "Сообщение успешно отправлено!";
+        
+
+	} else {
+
+		die();
+
+	}
+
+?>

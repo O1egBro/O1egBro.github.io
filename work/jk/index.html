@@ -54,7 +54,7 @@
         <!-- end header -->
         
 
-        <section class="position-relative wow fadeIn">
+        <section class="position-relative">
             <div class=" z-index-0"></div>
             <div class="container">
                 <div class="row">
@@ -82,10 +82,12 @@
                 </div>
             </div>
             <!-- start HTML5 video -->
-            <video loop="" autoplay="" controls="" muted class="html-video" poster="images/maintenance-bg.jpg">
-                <source type="video/mp4" src="video/md.MOV">
-                <source type="video/ogg" src="video/video.ogg">
-                <source type="video/webm" src="video/video.webm">
+            
+            <video  preload="auto" autoplay="autoplay" loop="loop" muted playsinline  class="html-video">
+                <source type="video/mp4" src="video/osx.mp4">
+                <source type="video/ogg" src="video/osx.ogv">
+                <source type="video/ogv" src="video/osx.ogv">
+                <source type="video/webm" src="video/osx.webm">
             </video>
             <!-- end HTML5 video -->
         </section>
@@ -568,7 +570,7 @@
                             <input type="text" name="promo" id="promo" placeholder="промокод: (при наличии)" class="big-input">
                         </div>
                         <div class="col-md-12 text-center">
-                            <button  type="submit" class="btn btn-transparent-dark-gray btn-large margin-20px-top">send message</button>
+                            <button  type="submit" class="btn btn-transparent-dark-gray btn-large margin-20px-top">отправить</button>
                         </div>
                 </form>
             </div>
@@ -579,7 +581,7 @@
                 <form class="row">
                     <a href="" class="close-modal"></a>
                     <h2 class="col-md-12">Анкета для курса "Воздух"</h2>
-                        <input type="hidden" name="forma" id="forma" value="Анкета для закрытого аккаунта">
+                        <input type="hidden" name="forma" id="forma" value="Анкета для курса Воздух">
                         <div class="col-md-6 col-sm-12">
                             <input type="text" name="name" id="name" placeholder="Имя" class="big-input r">
                         </div>
@@ -601,7 +603,7 @@
                             <input type="text" name="promo" id="promo" placeholder="промокод: (при наличии)" class="big-input">
                         </div>
                         <div class="col-md-12 text-center">
-                            <button type="submit" class="btn btn-transparent-dark-gray btn-large margin-20px-top">send message</button>
+                            <button type="submit" class="btn btn-transparent-dark-gray btn-large margin-20px-top">отправить</button>
                         </div>
                         <div class="col-md-12 text-center mess">
                             
@@ -662,5 +664,18 @@
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
         <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
         <script type="text/javascript" src="js/main.js"></script>
+        <script>
+        jQuery(document).ready(function() {
+  // Attach event handler 
+  $('video').on('click', function(event) {
+    event.preventDefault();
+    $('video')[0].play();
+  });
+
+  // Trigger click event
+  $('video').trigger('click');
+
+});
+        </script>
     </body>
 </html>
