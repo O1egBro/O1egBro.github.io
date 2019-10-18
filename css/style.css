@@ -203,11 +203,33 @@ section {
       .portfolio-list a span {
         transition: all ease 0.4s;
         position: relative; }
+.portfolio-list a span > b {
+    position: absolute;
+    left: 0;
+    top: 6px;
+    bottom: 0;
+    right: 100%;
+    overflow: hidden;
+    transition: right ease 1s;
+    opacity: 0;
+}
+.portfolio-list a span > b > i {
+    font-style: normal;
+}
+.portfolio-list a span > i {
+    font-style: normal;
+}
         @media (min-width: 960px) {
           .portfolio-list a span {
             opacity: 0.65; } }
       .portfolio-list a.active span {
-        opacity: 1; }
+        position: relative;
+        color: #fff700;
+        opacity: 1;}
+.portfolio-list a.active b {
+    right: 0;
+    color: #ffeb00;
+}
     .portfolio-list_line {
       transition: ease all 0.4s;
       position: absolute;
@@ -264,9 +286,11 @@ section {
     .info a:hover {
       -webkit-text-fill-color: unset;
       text-decoration: underline; }
+/*
   @media (min-width: 600px) {
     .info > * {
       width: 50%; } }
+*/
 
 .logo {
   font-family: "Wies";

@@ -85,6 +85,7 @@ pixel perfect</h1>
                                           fontSize:48,
                                           adress: 'freshnews.zt.ua',
                                           name: 'freshnews.zt.ua',
+                                          color: '',
                                       },
                                       { 
                                           id:'1',
@@ -92,6 +93,7 @@ pixel perfect</h1>
                                           fontSize:48,
                                           adress: 'doglyad.com',
                                           name: 'doglyad.com',
+                                          color: ''
                                       },
                                       { 
                                           id:'2',
@@ -99,6 +101,7 @@ pixel perfect</h1>
                                           fontSize:60,
                                           adress: 'unit.ru',
                                           name: 'unit.ru ',
+                                          color:''
                                       },
                                       { 
                                           id:'3',
@@ -106,6 +109,7 @@ pixel perfect</h1>
                                           fontSize:60,
                                           adress: 'witology.com',
                                           name: 'witology.com',
+                                          color:''
                                       },
                                         { 
                                           id:'3001',
@@ -113,6 +117,7 @@ pixel perfect</h1>
                                           fontSize:40,
                                           adress: 'vseomuzhskom.ru',
                                           name: 'vseomuzhskom.ru',
+                                          color:''
                                       },
                                       { 
                                           id:'4',
@@ -120,6 +125,7 @@ pixel perfect</h1>
                                           fontSize:34,
                                           adress: 'usadbadivnomorskoe.ru',
                                           name: 'usadbadivnomorskoe.ru',
+                                          color:''
                                       },
                                       { 
                                           id:'5',
@@ -127,6 +133,7 @@ pixel perfect</h1>
                                           fontSize:48,
                                           adress: 'cigaronne.com', 
                                           name: 'cigaronne.com', 
+                                          color:''
                                       },
                                       { 
                                           id:'6',
@@ -134,6 +141,7 @@ pixel perfect</h1>
                                           fontSize:60,
                                           adress: 'skilla3d.ru',
                                           name: 'skilla3d.ru',
+                                          color:''
                                       },
                                       { 
                                           id:'7',
@@ -141,6 +149,7 @@ pixel perfect</h1>
                                           fontSize:36,
                                           adress: 'advokat-dyachkov.ru', 
                                           name: 'advokat-dyachkov.ru', 
+                                          color:''
                                       },
                                       { 
                                           id:'8',
@@ -148,6 +157,7 @@ pixel perfect</h1>
                                           fontSize:60,
                                           adress: 'senso-rf.ru',
                                           name: 'senso-rf.ru',
+                                          color:''
                                       },
                                       { 
                                           id:'9',
@@ -155,6 +165,7 @@ pixel perfect</h1>
                                           fontSize:60,
                                           adress: 'trinfico.com',
                                           name: 'trinfico.com',
+                                          color:''
                                       },
                                       { 
                                           id:'10',
@@ -162,6 +173,7 @@ pixel perfect</h1>
                                           fontSize:60,
                                           adress: 'sirotin-k.ru',
                                           name: 'sirotin-k.ru',
+                                          color:''
                                       },
                                       { 
                                           id:'11',
@@ -169,6 +181,7 @@ pixel perfect</h1>
                                           fontSize:48,
                                           adress: 'equiptrade24.ru',
                                           name: 'equiptrade24.ru',
+                                          color:''
                                       },
                                       { 
                                           id:'12',
@@ -176,6 +189,7 @@ pixel perfect</h1>
                                           fontSize:36,
                                           adress: 'amsterdam-seeds.nl',
                                           name: 'amsterdam-seeds.nl',
+                                          color:''
                                       },
                                       { 
                                           id:'13',
@@ -183,6 +197,7 @@ pixel perfect</h1>
                                           fontSize:60,
                                           adress: 'weektrade.ru',
                                           name: 'weektrade.ru',
+                                          color:''
                                       },
                                       { 
                                           id:'14',
@@ -190,6 +205,7 @@ pixel perfect</h1>
                                           fontSize:60,
                                           adress: 'shkolakos.ru',
                                           name: 'shkolakos.ru',
+                                          color:''
                                       },
                                       { 
                                           id:'15',
@@ -197,13 +213,15 @@ pixel perfect</h1>
                                           fontSize:60,
                                           adress: 'art-rc.ru',
                                           name: 'art-rc.ru',
+                                          color:''
                                       },
                                       { 
                                           id:'16',
                                           active: false,
                                           fontSize:30,
                                           adress: 'velles.ru', 
-                                          name: 'Группа компаний «Веллес»' 
+                                          name: 'Группа компаний «Веллес»', 
+                                          color:''
                                       },
                                       { 
                                           id:'17',
@@ -211,6 +229,7 @@ pixel perfect</h1>
                                           fontSize:60,
                                           adress: 'de-vivre.com',
                                           name: 'de-vivre.com',
+                                          color:''
                                       },
                                       { 
                                           id:'18',
@@ -218,6 +237,7 @@ pixel perfect</h1>
                                           fontSize:60,
                                           adress: 'kr-tv.ru', 
                                           name: 'kr-tv.ru', 
+                                          color:''
                                       },
                                       { 
                                           id:'19',
@@ -225,6 +245,7 @@ pixel perfect</h1>
                                           fontSize:60,
                                           adress: 'util-euro.ru',
                                           name: 'util-euro.ru',
+                                          color:''
                                       },
                                       { 
                                           id:'20',
@@ -232,6 +253,7 @@ pixel perfect</h1>
                                           fontSize:36,
                                           adress: 'neomid-ukraine.com',
                                           name: 'neomid-ukraine.com',
+                                          color:''
                                       },
                                     ]
                                   }
@@ -242,6 +264,17 @@ pixel perfect</h1>
                                   created() {
                                     window.addEventListener('resize', this.handleResize)
                                     this.handleResize();
+                                      this.items.forEach(el => {
+                                          
+                                          if(el.color.length == 0) {
+//                                              el.color =  '#' + Math.random().toString(16).slice(2, 8).toUpperCase();
+                                              el.color =  '#fff700'
+                                              console.log(el.color)
+                                          }
+                                          
+                                        
+                                            
+                                    })
                                   },
                                   destroyed() {
                                     window.removeEventListener('resize', this.handleResize)
@@ -266,8 +299,18 @@ pixel perfect</h1>
                                         
                                         
                                         this.items.forEach(el => {
-                                            el.active = el === item;
+                                            el.active = el === item; 
+                                            
                                         })
+                                        
+                                       
+                                        
+                                        
+//                                        $event.target.style.color="#" + (function co(lor){   return (lor +=
+//  [0,1,2,3,4,5,6,7,8,9,'a','b','c','d','e','f'][Math.floor(Math.random()*16)])
+//  && (lor.length == 6) ?  lor : co(lor); })('');
+//                                        console.log(item)
+//                                        console.log()
                                         
                                         let blockHeight = this.$refs.portfolioimgblock.offsetHeight;
 
@@ -296,9 +339,9 @@ pixel perfect</h1>
                         <div v-if="width > 960" class="portfolio-list_line" ref="portfoliolistline" :style="{top: lineTop + 'px',left:lineLeft + 'px' }"></div>
                         
                         <a :href="'http://'+item.adress" target="_blank"  v-bind:style="[width > 960 ?{ fontSize: item.fontSize + 'px' }:{fontSize: 16+'px'}]" :class="{'active': item.active}" @click="setActive(item,$event)"  v-on:click="greet" v-for="item in items"  v-bind:key="item.id" >
-                            <span>{{ item.name }}</span>
+                            <span v-bind:style="[item.active?{ color: item.color }:{}]"><i>{{ item.name }}</i><b><i>{{ item.name }}</i></b></span>
                             <span v-if="width < 960">
-                            <img style="width: 100%" :src="'images/list/'+item.adress+'.jpg'" >
+                                <img style="width: 100%" :src="'images/list/'+item.adress+'.jpg'" >
                             </span>
                         </a>
                         
@@ -322,10 +365,13 @@ pixel perfect</h1>
         <section>
             <div class="wrapper">
                 <div class="info">
+<!--
                     <div>
                         
                     </div>
                     <div>
+                    </div>
+-->
                         <p>
                             Добрый день, меня зовут Олег (когда то забыл переключить расскладку и набрал свое имя как Jktu, с тех давних пор и повелось)<br><br><br>
                             Верстаю с 2010 года. В основном фриланс, но так же и нанимали крупные компании. 
@@ -341,7 +387,7 @@ pixel perfect</h1>
                             А еще у меня есть <a href="https://docs.google.com/document/d/1BSsNMnie_iQu0G0-7IWRmw2r_Ldu0ook_pEJJhl674Q/edit?usp=sharing" target="_blank">резюме</a>. Прикольное, да? Сам придумал оформление.. верстальщик все таки)  
                             
                         </p>
-                    </div>
+                    
                 </div>
             </div>
         </section>
