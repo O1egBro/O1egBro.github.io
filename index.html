@@ -1,28 +1,29 @@
 <!DOCTYPE html>
 <html>
-
 <head>
-    <meta charset=utf-8>
-    <title>Верстка под ключ</title>
-
-    <meta name="viewport" id="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
-
-
-    <!--styles-->
-    <link rel="stylesheet" type="text/css" href="css/style.css" />
-    <link rel="stylesheet" type="text/css" href="fonts/font.css" />
-    <link href="https://fonts.googleapis.com/css?family=Roboto:100,400,700&amp;subset=cyrillic" rel="stylesheet">
-
-
-
-    <!--libs-->
-
-    <!--[if lt IE 9]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
-    <script type="text/javascript" src="js/libs/jquery-3.2.1.min.js"></script>
-    <script type="text/javascript" src="js/libs/vue.js"></script>
-
-    <!--general-->
-    <script type="text/javascript" src="js/common.js"></script>
+	<meta charset=utf-8>
+	<title>Верстка под ключ</title>
+	
+	<meta name="viewport" id="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+	
+	
+	<!--styles-->
+	<link rel="stylesheet" type="text/css" href="css/style.css" />
+	<link rel="stylesheet" type="text/css" href="fonts/font.css" />
+	<link href="https://fonts.googleapis.com/css?family=Roboto:100,400,700&amp;subset=cyrillic" rel="stylesheet">
+    
+    <script>
+        if(navigator.userAgentData.mobile) setTimeout(function() { document.querySelector('.popup').classList.add('mobile');}, 10);
+    </script>
+	
+	<!--libs-->
+	
+	<!--[if lt IE 9]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+	<script type="text/javascript" src="js/libs/jquery-3.2.1.min.js"></script> 
+	<script type="text/javascript" src="js/libs/vue.js"></script>
+	
+	<!--general-->
+	<script type="text/javascript" src="js/common.js"></script>
 </head>
 
 <body>
@@ -39,7 +40,7 @@
         </div>
     </header>
     <div class="main">
-
+        
         <section class="first">
             <div class="wrapper">
 
@@ -51,7 +52,7 @@
                     <div class="logo-bot">
                         Верстка под ключ
                     </div>
-
+                    
                 </div>
                 <div class="stek">
                     <span>Html5/css3</span>
@@ -67,281 +68,510 @@
             </div>
         </section>
         <section>
-
-
+             
+            
             <div class="wrapper">
-                <script defer>
-                    window.addEventListener('load', function() {
-                        const data = {
-                            margin: 0,
-                            lineTop: 25,
-                            lineLeft: 438,
-                            src: 'freshnews.zt.ua',
-                            width: 0,
-                            items: [{
-                                id: '0',
-                                active: true,
-                                fontSize: 48,
-                                adress: 'freshnews.zt.ua',
-                                name: 'freshnews.zt.ua',
-                                color: '',
-                            }, {
-                                id: '1',
-                                active: false,
-                                fontSize: 48,
-                                adress: 'doglyad.com',
-                                name: 'doglyad.com',
-                                color: ''
-                            }, {
-                                id: '2',
-                                active: false,
-                                fontSize: 60,
-                                adress: 'unit.ru',
-                                name: 'unit.ru ',
-                                color: ''
-                            }, {
-                                id: '3',
-                                active: false,
-                                fontSize: 60,
-                                adress: 'witology.com',
-                                name: 'witology.com',
-                                color: ''
-                            }, {
-                                id: '3001',
-                                active: false,
-                                fontSize: 40,
-                                adress: 'vseomuzhskom.ru',
-                                name: 'vseomuzhskom.ru',
-                                color: ''
-                            }, {
-                                id: '4',
-                                active: false,
-                                fontSize: 34,
-                                adress: 'usadbadivnomorskoe.ru',
-                                name: 'usadbadivnomorskoe.ru',
-                                color: ''
-                            }, {
-                                id: '5',
-                                active: false,
-                                fontSize: 48,
-                                adress: 'cigaronne.com',
-                                name: 'cigaronne.com',
-                                color: ''
-                            }, {
-                                id: '6',
-                                active: false,
-                                fontSize: 60,
-                                adress: 'skilla3d.ru',
-                                name: 'skilla3d.ru',
-                                color: ''
-                            }, {
-                                id: '7',
-                                active: false,
-                                fontSize: 36,
-                                adress: 'advokat-dyachkov.ru',
-                                name: 'advokat-dyachkov.ru',
-                                color: ''
-                            }, {
-                                id: '8',
-                                active: false,
-                                fontSize: 60,
-                                adress: 'senso-rf.ru',
-                                name: 'senso-rf.ru',
-                                color: ''
-                            }, {
-                                id: '9',
-                                active: false,
-                                fontSize: 60,
-                                adress: 'trinfico.com',
-                                name: 'trinfico.com',
-                                color: ''
-                            }, {
-                                id: '10',
-                                active: false,
-                                fontSize: 60,
-                                adress: 'sirotin-k.ru',
-                                name: 'sirotin-k.ru',
-                                color: ''
-                            }, {
-                                id: '11',
-                                active: false,
-                                fontSize: 48,
-                                adress: 'equiptrade24.ru',
-                                name: 'equiptrade24.ru',
-                                color: ''
-                            }, {
-                                id: '12',
-                                active: false,
-                                fontSize: 36,
-                                adress: 'amsterdam-seeds.nl',
-                                name: 'amsterdam-seeds.nl',
-                                color: ''
-                            }, {
-                                id: '13',
-                                active: false,
-                                fontSize: 60,
-                                adress: 'weektrade.ru',
-                                name: 'weektrade.ru',
-                                color: ''
-                            }, {
-                                id: '14',
-                                active: false,
-                                fontSize: 60,
-                                adress: 'shkolakos.ru',
-                                name: 'shkolakos.ru',
-                                color: ''
-                            }, {
-                                id: '15',
-                                active: false,
-                                fontSize: 60,
-                                adress: 'art-rc.ru',
-                                name: 'art-rc.ru',
-                                color: ''
-                            }, {
-                                id: '16',
-                                active: false,
-                                fontSize: 30,
-                                adress: 'velles.ru',
-                                name: 'Группа компаний «Веллес»',
-                                color: ''
-                            }, {
-                                id: '17',
-                                active: false,
-                                fontSize: 60,
-                                adress: 'de-vivre.com',
-                                name: 'de-vivre.com',
-                                color: ''
-                            }, {
-                                id: '18',
-                                active: false,
-                                fontSize: 60,
-                                adress: 'kr-tv.ru',
-                                name: 'kr-tv.ru',
-                                color: ''
-                            }, {
-                                id: '19',
-                                active: false,
-                                fontSize: 60,
-                                adress: 'util-euro.ru',
-                                name: 'util-euro.ru',
-                                color: ''
-                            }, {
-                                id: '20',
-                                active: false,
-                                fontSize: 36,
-                                adress: 'neomid-ukraine.com',
-                                name: 'neomid-ukraine.com',
-                                color: ''
-                            }, ]
-                        }
-
-                        new Vue({
-                            el: '.portfolio',
-                            data: data,
-                            created() {
-                                window.addEventListener('resize', this.handleResize)
-                                this.handleResize();
-                                this.items.forEach(el => {
-
-                                    if (el.color.length == 0) {
-                                        //                                              el.color =  '#' + Math.random().toString(16).slice(2, 8).toUpperCase();
-                                        el.color = '#fff700'
-                                        console.log(el.color)
-                                    }
 
 
-
-                                })
-                            },
-                            destroyed() {
-                                window.removeEventListener('resize', this.handleResize)
-                            },
-                            methods: {
-                                greet: function(event) {
-                                    if (window.innerWidth > 960) {
-                                        event.preventDefault();
-                                    }
-
-
-                                },
-
-                                setActive(item, $event) {
-
-
-                                    this.margin = (this.$refs.portfolio.getBoundingClientRect().bottom - $event.target.getBoundingClientRect().top > 270) ? $event.target.getBoundingClientRect().top - this.$refs.portfolio.getBoundingClientRect().top : this.$refs.portfolio.getBoundingClientRect().bottom - this.$refs.portfolio.getBoundingClientRect().top - 280;
-
-                                    this.lineTop = $event.target.getBoundingClientRect().top - this.$refs.portfolio.getBoundingClientRect().top + $event.target.offsetHeight / 2;
-
-                                    this.lineLeft = $event.target.getBoundingClientRect().width + 15;
-
-
-                                    this.items.forEach(el => {
-                                        el.active = el === item;
-
-                                    })
-
-
-
-
-                                    //                                        $event.target.style.color="#" + (function co(lor){   return (lor +=
-                                    //  [0,1,2,3,4,5,6,7,8,9,'a','b','c','d','e','f'][Math.floor(Math.random()*16)])
-                                    //  && (lor.length == 6) ?  lor : co(lor); })('');
-                                    //                                        console.log(item)
-                                    //                                        console.log()
-
-                                    let blockHeight = this.$refs.portfolioimgblock.offsetHeight;
-
-                                    setTimeout(function() {
-                                        $event.target.innerHTML
-                                    }, 100)
-
-                                },
-                                handleResize() {
-                                    this.width = window.innerWidth;
-                                }
-                            },
-                            computed: {
-                                computedWidth: function() {
-                                    return this.width;
-                                }
-                            },
-                            //                                  
-                        });
-
-
-                    })
-                </script>
-
-                <div class="portfolio" style="height: 1165px;" ref="portfolio">
-
+                <div class="portfolio" style="">
                     <div class="portfolio-list">
-                        <div v-if="width > 960" class="portfolio-list_line" ref="portfoliolistline" :style="{top: lineTop + 'px',left:lineLeft + 'px' }"></div>
-
-                        <a :href="'http://'+item.adress" target="_blank" v-bind:style="[width > 960 ?{ fontSize: item.fontSize + 'px' }:{fontSize: 16+'px'}]" :class="{'active': item.active}" @click="setActive(item,$event)" v-on:click="greet" v-for="item in items" v-bind:key="item.id">
-                            <span v-bind:style="[item.active?{ color: item.color }:{}]"><i>{{ item.name }}</i><b><i>{{ item.name }}</i></b></span>
-                            <span v-if="width < 960">
-                                <img style="width: 100%" :src="'images/list/'+item.adress+'.jpg'" >
-                            </span>
+<!--                        <div class="portfolio-list_line" style="top: 24px;left: 433.737px;"></div> -->
+                        
+                        
+                        
+                        <a href="http://doglyad.com" data-noadress="true" class="portfolio-list_a active" class="portfolio-list_a" data-item="item2" target="_blank"  style="font-size: 48px;">
+                            doglyad.com
+                        </a>
+                        
+                        <a href="https://o1egbro.github.io/bixter/" data-noadress="true" class="portfolio-list_a" class="portfolio-list_a" data-item="item4" target="_blank" class="" style="font-size: 60px;">
+                            bixter Work
+                        </a>
+                        
+                        <a href="https://o1egbro.github.io/assa/" data-noadress="true" class="portfolio-list_a" data-item="item5" target="_blank" class="" style="font-size: 60px;">
+                            издательство assa
+                        </a>
+                        <a href="https://o1egbro.github.io/cupon/" data-noadress="true" class="portfolio-list_a" data-item="item6" target="_blank" class="" style="font-size: 60px;">
+                            <span><i>coupon free</i></span>
+                        </a>
+                        <a href="https://o1egbro.github.io/digital_admin" data-noadress="true" class="portfolio-list_a" data-item="item7" target="_blank" class="" style="font-size: 40px;">
+                            <span><i>digital-control</i></span>
+                        </a>
+                        <a href="https://o1egbro.github.io/deadWeak/" data-noadress="true" class="portfolio-list_a" data-item="item8" target="_blank" class="" style="font-size: 60px;">
+                            <span><i>deadWeak</i></span>
+                        </a>
+                        <a href="https://o1egbro.github.io/deadWeak/" data-noadress="true" class="portfolio-list_a" data-item="item9" target="_blank" class="" style="font-size: 33px;">
+                            <span><i>Дмитрий Норка школа</i></span>
+                        </a>
+                        <a href="https://o1egbro.github.io/doors/" data-noadress="true" class="portfolio-list_a" data-item="item10" target="_blank" class="" style="font-size: 40px;">
+                            <span><i>Планета Дверей</i></span>
+                        </a>
+                        <a href="https://o1egbro.github.io/doors/" data-noadress="true" class="portfolio-list_a" data-item="item11" target="_blank" class="" style="font-size: 40px;">
+                            <span><i>Boot Up Me</i></span>
+                        </a>
+                        
+                        <a href="http://freshnews.zt.ua" data-noadress="false" class="portfolio-list_a" data-item="item1" target="_blank" class="" style="font-size: 40px;">
+                            <span><i>freshnews.zt.ua</i></span> 
+                        </a>
+                        
+                        <a href="http://unit.ru" data-noadress="false" class="portfolio-list_a" data-item="item3" target="_blank" class="" style="font-size: 60px;">
+                            <span><i>unit.ru</i></span> 
+                        </a>
+                        
+                        
+<!--
+                        <a href="http://witology.com" target="_blank" class="" style="font-size: 60px;">
+                            <span><i>witology.com</i><b><i>witology.com</i></b></span> 
                         </a>
 
 
-                    </div>
-                    <div class="portfolio-img" ref="portfolio" v-if="width > 960">
 
-                        <div class="portfolio-img_block" ref="portfolioimgblock" :style="{marginTop: margin + 'px'}">
-                            <div v-for="item in items">
-                                <img :class="{'active': item.active}" @click="setActive(item)" :data-item="item.adress" v-on:click="greet" v-bind:key="item.id" :src="'images/list/'+item.adress+'.jpg'">
-                                <a :href="'http://'+item.adress" target="_blank" class="portfolio-img-a">{{item.adress}}</a>
+-->
+<!--
+                        <a href="http://vseomuzhskom.ru" data-noadress="false" class="portfolio-list_a" data-item="item3" target="_blank" class="" style="font-size: 40px;">
+                            <span><i>vseomuzhskom.ru</i><b><i>vseomuzhskom.ru</i></b></span> 
+                        </a>
+                        <a href="http://usadbadivnomorskoe.ru" target="_blank" class="" style="font-size: 30px;">
+                            <span><i>usadbadivnomorskoe.ru</i><b><i>usadbadivnomorskoe.ru</i></b></span> 
+                        </a>
+                        <a href="http://cigaronne.com" target="_blank" class="" style="font-size: 48px;">
+                            <span><i>cigaronne.com</i><b><i>cigaronne.com</i></b></span> 
+                        </a>
+                        <a href="http://advokat-dyachkov.ru" target="_blank" class="" style="font-size: 36px;">
+                            <span><i>advokat-dyachkov.ru</i><b><i>advokat-dyachkov.ru</i></b></span> 
+                        </a>
+                        <a href="http://senso-rf.ru" target="_blank" class="" style="font-size: 60px;">
+                            <span><i>senso-rf.ru</i><b><i>senso-rf.ru</i></b></span> 
+                        </a>
+                        <a href="http://trinfico.com" target="_blank" class="" style="font-size: 60px;">
+                            <span><i>trinfico.com</i><b><i>trinfico.com</i></b></span> 
+                        </a>
+                        <a href="http://sirotin-k.ru" target="_blank" class="" style="font-size: 60px;">
+                            <span><i>sirotin-k.ru</i><b><i>sirotin-k.ru</i></b></span> 
+                        </a>
+                        <a href="http://equiptrade24.ru" target="_blank" class="" style="font-size: 48px;">
+                            <span><i>equiptrade24.ru</i><b><i>equiptrade24.ru</i></b></span> 
+                        </a>
+                        <a href="http://amsterdam-seeds.nl" target="_blank" class="" style="font-size: 36px;">
+                            <span><i>amsterdam-seeds.nl</i><b><i>amsterdam-seeds.nl</i></b></span> 
+                        </a>
+                        <a href="http://weektrade.ru" target="_blank" class="" style="font-size: 60px;">
+                            <span><i>weektrade.ru</i><b><i>weektrade.ru</i></b></span> 
+                        </a>
+                        <a href="http://shkolakos.ru" target="_blank" class="" style="font-size: 60px;">
+                            <span><i>shkolakos.ru</i><b><i>shkolakos.ru</i></b></span> 
+                        </a>
+                        <a href="http://art-rc.ru" target="_blank" class="" style="font-size: 60px;">
+                            <span><i>art-rc.ru</i><b><i>art-rc.ru</i></b></span> 
+                        </a>
+                        <a href="http://velles.ru" target="_blank" class="" style="font-size: 60px;">
+                            <span><i>velles.ru</i><b><i>velles.ru</i></b></span> 
+                        </a>
+                        <a href="http://de-vivre.com" target="_blank" class="" style="font-size: 60px;">
+                            <span><i>de-vivre.com</i><b><i>de-vivre.com</i></b></span> 
+                        </a>
+                        <a href="http://kr-tv.ru" target="_blank" class="" style="font-size: 60px;">
+                            <span><i>kr-tv.ru</i><b><i>kr-tv.ru</i></b></span> 
+                        </a>
+                        <a href="http://util-euro.ru" target="_blank" class="" style="font-size: 60px;">
+                            <span><i>util-euro.ru</i><b><i>util-euro.ru</i></b></span> 
+                        </a>
+                        <a href="http://neomid-ukraine.com" target="_blank" class="" style="font-size: 36px;">
+                            <span><i>neomid-ukraine.com</i><b><i>neomid-ukraine.com</i></b></span> 
+                        </a>
+-->
+                    </div> 
+                    <div class="portfolio-img">
+                        <div class="portfolio-img_block" style="margin-top: 0px;">
+                            <div>
+                                <a href="" target="_blank" class="openPopup">
+                                    <img class="portfolio-list_a" data-item="" src="images/list/doglyad.jpg" class=""> 
+                                </a>
+                                <a href="" target="_blank" class="portfolio-img-a"></a>
                             </div>
                         </div>
                     </div>
-
-
                 </div>
-
+                
             </div>
         </section>
     </div>
-</body>
+    
 
+    
+<div class="popup">
+    <div class="popup-content">
+        <div class="popup-left">
+            <div class="popup-left-head">
+                <div class="popup-head">
+                    BootUpMe
+                </div>
+            </div>
+            <div class="popup-subhead">
+                Редизайн страниц для сервиса раскрутки instagram профиля
+            </div>
+            
+            
+            
+            <ul class="index_list">
+                <li class="index_li"><a href="https://o1egbro.github.io/bootme/login.html">Login</a></li>
+                <li class="index_li"><a href="https://o1egbro.github.io/bootme/login_code.html">Login Code</a></li>
+                <li class="index_li"><a href="https://o1egbro.github.io/bootme/restore_pass.html">Восстановить пароль</a></li>
+                <li class="index_li"><a href="https://o1egbro.github.io/bootme/restore_pass_send.html">Восстановить пароль (отправлен)</a></li>
+                <li class="index_li active"><a href="https://o1egbro.github.io/bootme/dashboard.html">Dashboard</a></li>
+                <li class="index_li"><a href="https://o1egbro.github.io/bootme/dashboardMini.html">DashboardMini</a></li>
+                <li class="index_li"><a href="https://o1egbro.github.io/bootme/tools.html">Tools</a></li>
+                <li class="index_li"><a href="https://o1egbro.github.io/bootme/specSearch.html">specSearch</a></li>
+            </ul>
+        </div>
+        <div class="popup-right">
+            <a href="" class="popup__close">close</a>
+            <div class="popup_top">
+                <div class="popup-head__right">
+                    <div class="popup_menu">
+                        <div class="popup_menu_a active">
+                            desktop
+                        </div>
+                        <div class="popup_menu_a">
+                            tablet
+                        </div>
+                        <div class="popup_menu_a">
+                            mobile
+                        </div>
+                    </div>
+                    <div class="popup_adress"><a href="" target="_blank"></a></div>
+                </div>
+                
+            </div>
+            <div class="popup-block load">
+            <div class="popup-block__in">
+                <iframe class="popup-frame" src="" frameborder="0"></iframe>
+                
+            </div>
+            </div>
+            
+        </div>
+    </div>    
+    </div>
+
+    <style>
+        .noAdress .popup-block__in {
+            transform: scale(1)!important;
+            width: 100%!important;
+            height: 100%;
+        }
+        .noAdress .popup_menu,
+        .noAdress iframe {
+            display: none!important;
+        }
+        .noAdress .popup-block__in {
+            background: none;
+        }
+        .noAdress .openPopup:hover img {
+            opacity: 1;
+        }
+
+        .noAdress .openPopup,
+        .noAdress .openPopup img {
+            margin: 0 auto;
+            display: block;
+            width: 100%;
+        }
+        .popup__close {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+        }
+        .openPopup {
+            position: relative;
+            cursor: pointer;
+        }
+        .openPopup:after {
+            content: '';
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: red;
+        }
+        .openPopup:hover img {
+            opacity: 0.5
+        }
+        .openPopup:hover:before {
+            opacity: 1
+        }
+        .popup {
+            display: none;
+            
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            right: 20px;
+            bottom: 20px;
+            width: calc(100% - 60px);
+            height: calc(100% - 40px);
+            z-index: 100;
+            
+            box-shadow: 4px 4px 5px rgba(0,0,0,.4);
+            
+            border-radius: 5px;
+            overflow: hidden;
+            
+            background: #353744;
+        }
+        @media (max-width: 650px) {
+            .popup {
+                top: 10px;
+                left: 10px;
+                right: 10px;
+                bottom: 10px;
+                width: calc(100% - 20px);
+                height: calc(100% - 20px);
+            }
+        }
+        
+        @-moz-document url-prefix() {
+          .popup-frame {
+                width: calc(100% - 40px);
+            }
+        }
+        
+        .popup-content {
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: stretch;
+        }
+        .popup-left {
+            width: 270px;
+            display: flex;
+            flex-direction: column;
+            
+            padding: 20px;
+            
+            background: rgb(76,78,91);
+            background: linear-gradient(156deg, rgba(76,78,91,1) 0%, rgba(64,64,75,1) 100%);
+            
+            
+            
+        }
+        .popup-right {
+            width: calc(100% - 290px);
+            margin-left: 20px;
+                padding-right: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: stretch;
+            overflow: hidden;
+        }
+        
+        .popup-head {
+            
+            font-size: 25px;
+            font-weight: 400;
+            color: #f5f5f4;
+           
+        }
+        .popup-head__right {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+          
+            
+        }
+        .popup_top {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            margin: 25px 0px 0px 0px;
+        }
+        .popup-subhead {
+            max-width: 350px;
+            padding: 0px 25px 15px 0px;
+            border-bottom: 2px solid #4a4c58;
+            font-size: 13px;
+        }
+        .popup-block {
+            margin: 0;
+            flex: 1 1 auto;
+            overflow: hidden;
+            box-sizing: border-box;
+            padding: 20px;
+        }
+        
+        .popup-block__in {
+            background: #fff;
+            width: 1600px;
+            height: 900px;
+            margin: 0 auto;
+            transform-origin: top left;
+            
+            
+            position: relative;
+            margin: 40px auto;
+            width: 360px;
+            height: 780px;
+            border-radius: 15px;
+            box-shadow: 0px 0px 0px 11px #1f1f1f, 0px 0px 0px 13px #191919, 0px 0px 0px 20px #111;
+            
+            overflow: hidden;
+            
+        }
+        
+        
+        
+        .popup-block.load .popup-block__in:after {
+            content: '';
+            z-index: 2;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: #353744;
+        }
+        .popup-block.load .popup-block__in:before {
+            content: '';
+            z-index: 3;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 50px;
+            height: 50px;
+            margin-left: -25px;
+            margin-top: -25px;
+            border-radius: 50%;
+            background: url(images/load.svg) no-repeat center;
+        }
+        
+        .popup-block__in.desktop {
+            width: 1600px;
+            height: 900px;
+        }
+
+        
+        .popup-block__in.tablet {
+            width: 800px;
+            height: 600px;
+        }
+
+        .popup-block__in.mobile {
+            width: 380px;
+            height: 560;
+            overflow: hidden;
+            padding: 0px;
+            background: #fff;
+        }
+        
+        .popup-frame {
+            width: calc( 100% + 20px) ;
+            height: 100%;
+        }
+        @-moz-document url-prefix() {
+          .popup-frame {
+                width: 100% ;
+            }
+        }
+        .popup.mobile .popup-frame {
+             width: 100% ;
+        }
+        
+        
+        .index_list {
+            padding: 0 0px 0 0px;
+            margin-bottom: 25px;
+            flex: 1 1 auto;
+            overflow: auto;
+        }
+        .index_list::-webkit-scrollbar {
+          width: 8px;               /* ширина всей полосы прокрутки */
+        }
+
+        .index_list::-webkit-scrollbar-track {
+          background: none;        /* цвет зоны отслеживания */
+        }
+
+        .index_list::-webkit-scrollbar-thumb {
+          background-color: #353744;    /* цвет бегунка */
+          border-radius: 20px;       /* округлось бегунка */
+          border: none;  /* отступ вокруг бегунка */
+        }
+        
+        .index_li {
+            font-size: 12px;
+            transition: all ease 0.4s;
+            
+            border-radius: 5px;
+            margin-right: 15px;
+            margin-bottom: 2px;
+        }
+        li.index_li.active {
+            background: #7e93aa29;
+        }
+        .index_li a:hover,
+        .index_li.active a {
+            color: #7e93aa;
+        }
+        .index_li a {
+            padding: 2px 15px 2px 4px;
+            display: block;
+        }
+        .popup_menu {
+            display: flex;
+            font-size: 10px;
+            margin-right: 25px;
+        }
+        .popup_menu_a {
+            padding: 7px 12px;
+            border: 1px solid #4a4c58;
+            color: #4a4c58;
+            cursor: pointer;
+        }
+        .popup_menu_a.active {
+            border-color: #ffffffbd;
+            color: #ffffffbd;
+        }
+        .popup_menu_a:hover {
+            color: #ffffffbd;
+        }
+        .popup_menu_a:first-child {
+            border-radius: 15px 0 0 15px;
+        }
+        .popup_menu_a:last-child {
+            border-radius: 0 15px 15px 0;
+        }
+        .popup_adress {
+            font-size: 11px;
+            text-align: left;
+        }
+        .popup_adress a:hover {
+            text-decoration: underline;
+                color: #7e93aa;
+        }
+        .popupOpenTrue {
+            overflow: hidden;
+        }
+        .popupOpenTrue .main {
+            overflow-y: scroll;
+        }
+        
+
+    </style>
+    
+
+</body>
 </html>
