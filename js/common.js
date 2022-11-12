@@ -819,10 +819,11 @@ var Common = {
                 $('.popup-block__in .openPopup').remove();
                 
                 $('.popup-frame').attr('src','https://'+oleg+data[item].name+'/'+data[item].adress);
-                $('.popup_adress a').html('https://'+oleg+data[item].name).attr('href','https://o1egbro.github.io/'+data[item].name).parent('div').prepend('github pages - ')
+//                $('.popup_adress a').html('https://'+oleg+data[item].name).attr('href','https://o1egbro.github.io/'+data[item].name).parent('div').prepend('github pages - ')
                 
-                //TEMP
-                $('.popup_adress').append('<br>github code - <a target="_blank" href="https://github.com/O1egBro/'+data[item].name+'">https://github.com/O1egBro/'+data[item].name+'</a>')
+                $('.popup_adress').html('github code - <a target="_blank" href="https://github.com/O1egBro/'+data[item].name+'">https://github.com/O1egBro/'+data[item].name+'</a><br>github pages - <a target="_blank" href="https://o1egbro.github.io/'+data[item].name+'">https://'+oleg+data[item].name+'</a>')
+                
+            
             }
             addSize()
 
