@@ -621,36 +621,36 @@ var Common = {
         window.addEventListener("resize", resize);
         resize();
         
-//        $.fn.preload = function() {
-//            this.each(function(){
-//                $('<img/>')[0].src = this;
-//            });
-//        }
-//
-//
-//
-//        $(['images/list/advokat-dyachkov.ru.jpg',
-//            'images/list/amsterdam-seeds.nl.jpg',
-//            'images/list/art-rc.ru.jpg',
-//            'images/list/cigaronne.com.jpg',
-//            'images/list/de-vivre.com.jpg',
-//            'images/list/doglyad.com.jpg',
-//            'images/list/equiptrade24.ru.jpg',
-//            'images/list/freshnews.zt.ua.jpg',
-//            'images/list/kr-tv.ru.jpg',
-//            'images/list/neomid-ukraine.com.jpg',
-//            'images/list/senso-rf.ru.jpg',
-//            'images/list/shkolakos.ru.jpg',
-//            'images/list/sirotin-k.ru.jpg',
-//            'images/list/skilla3d.ru.jpg',
-//            'images/list/trinfico.com.jpg',
-//            'images/list/unit.ru.jpg',
-//            'images/list/usadbadivnomorskoe.ru.jpg',
-//            'images/list/util-euro.ru.jpg',
-//            'images/list/velles.ru.jpg',
-//            'images/list/vseomuzhskom.ru.jpg',
-//            'images/list/weektrade.ru.jpg',
-//            'images/list/witology.com.jpg',]).preload();
+        $.fn.preload = function() {
+            this.each(function(){
+                $('<img/>')[0].src = this;
+            });
+        }
+
+
+
+        $(['images/list/advokat-dyachkov.ru.jpg',
+            'images/list/amsterdam-seeds.nl.jpg',
+            'images/list/art-rc.ru.jpg',
+            'images/list/cigaronne.com.jpg',
+            'images/list/de-vivre.com.jpg',
+            'images/list/doglyad.com.jpg',
+            'images/list/equiptrade24.ru.jpg',
+            'images/list/freshnews.zt.ua.jpg',
+            'images/list/kr-tv.ru.jpg',
+            'images/list/neomid-ukraine.com.jpg',
+            'images/list/senso-rf.ru.jpg',
+            'images/list/shkolakos.ru.jpg',
+            'images/list/sirotin-k.ru.jpg',
+            'images/list/skilla3d.ru.jpg',
+            'images/list/trinfico.com.jpg',
+            'images/list/unit.ru.jpg',
+            'images/list/usadbadivnomorskoe.ru.jpg',
+            'images/list/util-euro.ru.jpg',
+            'images/list/velles.ru.jpg',
+            'images/list/vseomuzhskom.ru.jpg',
+            'images/list/weektrade.ru.jpg',
+            'images/list/witology.com.jpg',]).preload();
         
         
         $('.portfolio-list_a').on('click',function(e){
