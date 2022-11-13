@@ -364,4 +364,28 @@ h1 {
     h1 {
       font-size: 23px; } }
 
-/*# sourceMappingURL=maps/style.css.map */
+.m-block {
+    width: 100%;
+    padding: 15px 20px;
+    display: none;
+}
+.m-block__right,
+.m-block__adress {
+    width: 50%;
+    min-width: 50%;
+}
+.m-block__adress {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+    text-align: center;
+}
+.m-block img {
+    width: 100%;
+    display: block;
+}
+.m-block__adress a {
+    display: inline;
+    text-transform: initial;
+}

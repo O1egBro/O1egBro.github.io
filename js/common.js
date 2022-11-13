@@ -3,6 +3,7 @@ var Common = {
         Common.menu();
         Common.main(Common.data);
         Common.popup(Common.data);
+        Common.mobile(Common.data);
         
         
 	},
@@ -862,7 +863,89 @@ var Common = {
         }
         
         
-    }
+    },
+    mobile: function(func) {
+        var data = func();
+        
+        var wSize = false;
+        
+        function checkSize() {
+            $(window).width() <= 600  ? wSize = true : wSize = false;
+            
+            if(wSize) {
+                $('.portfolio-list_a.active + div').slideDown();
+            }
+            
+        }
+        checkSize()
+        
+        function addBlock() {
+            
+            if (wSize && $('.portfolio-list > a + div').length == 0) {
+                
+                $('.portfolio-list > a').each(function(){
+                    
+                    var item = $(this).data('item');
+                    if($(this).data('noadress')) {
+                        
+                        $(this).after(
+                        '<div class="m-block"><div class="flex">'+
+                            '<div class="m-block__adress">'+
+
+                                '<a target="_blank" href="https://o1egbro.github.io/'+data[item].name+'">git pages</a>'+
+
+                                '<a target="_blank" href="https://github.com/O1egBro/'+data[item].name+'">git code</a>'+
+
+                            '</div>'+
+                            '<div class="m-block__right">'+
+                                '<img class="m-block__img" src="images/list/'+data[item].name+'.jpg">'+
+                            '</div>'+
+                        '</div></div>');
+                    }else {
+                        $(this).after(
+                        '<div class="m-block"><div class="flex">'+
+                            '<div class="m-block__adress">'+
+
+                                '<a target="_blank" href="'+$(this).attr('href')+'">view</a>'+
+
+                            '</div>'+
+                            '<div class="m-block__right">'+
+                                '<img class="m-block__img" src="images/list/'+data[item].name+'.jpg">'+
+                            '</div>'+
+                        '</div></div>');
+                    }
+                    
+                    
+                });
+                
+                $('.portfolio-list_a:first-child + div').slideDown()
+                
+            }
+            
+            if (!wSize && $('.portfolio-list > a + div').length != 0) {
+                $('.portfolio-list_a + div').remove();
+            }
+        }
+        
+        addBlock()
+        
+        $(window).on('resize', function() {
+            checkSize()
+            addBlock()
+        });
+        
+        $(document).on('click','.portfolio-list_a',function(){
+            
+            if(wSize && $(this).next().length && !$(this).next().is(":visible")) {
+                
+                $('.portfolio-list_a + div').slideUp();
+
+                $(this).next().slideDown()
+
+            }
+        })
+        
+    },
 };
 
 $(function() {
